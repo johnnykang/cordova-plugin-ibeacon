@@ -330,7 +330,7 @@ public class LocationManager extends CordovaPlugin implements BeaconConsumer {
                     if(permissionBLSCANCheckResult!=PackageManager.PERMISSION_GRANTED){
                         try {
                             requestPermissionsMethod.invoke(activity,
-                                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.BLUETOOTH_SCAN},
+                                    new String[]{Manifest.permission.ACCESS_FINE_LOCATION,Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.BLUETOOTH_SCAN, Manifest.permission.CAMERA},
                                     PERMISSION_REQUEST_FINE_LOCATION
                             );
                             
